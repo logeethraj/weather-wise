@@ -235,24 +235,24 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-4 gap-3 mt-6 text-sm">
-              <div className="bg-white/10 rounded-xl py-3">
-                <p className="text-white/70">Feels Like</p>
-                <p className="font-semibold text-lg">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 text-sm">
+              <div className="bg-white/10 rounded-xl py-3 px-2">
+                <p className="text-white/70 text-xs sm:text-sm">Feels Like</p>
+                <p className="font-semibold text-base sm:text-lg">
                   {Math.round(weather.main.feels_like)}°C
                 </p>
               </div>
-              <div className="bg-white/10 rounded-xl py-3">
-                <p className="text-white/70">Humidity</p>
-                <p className="font-semibold text-lg">{weather.main.humidity}%</p>
+              <div className="bg-white/10 rounded-xl py-3 px-2">
+                <p className="text-white/70 text-xs sm:text-sm">Humidity</p>
+                <p className="font-semibold text-base sm:text-lg">{weather.main.humidity}%</p>
               </div>
-              <div className="bg-white/10 rounded-xl py-3">
-                <p className="text-white/70">Wind</p>
-                <p className="font-semibold text-lg">{weather.wind.speed} m/s</p>
+              <div className="bg-white/10 rounded-xl py-3 px-2">
+                <p className="text-white/70 text-xs sm:text-sm">Wind</p>
+                <p className="font-semibold text-base sm:text-lg">{weather.wind.speed} m/s</p>
               </div>
-              <div className="bg-white/10 rounded-xl py-3">
-                <p className="text-white/70">Precipitation</p>
-                <p className="font-semibold text-lg">{weather.precipitationChance ?? 0}%</p>
+              <div className="bg-white/10 rounded-xl py-3 px-2">
+                <p className="text-white/70 text-xs sm:text-sm">Precipitation</p>
+                <p className="font-semibold text-base sm:text-lg">{weather.precipitationChance ?? 0}%</p>
               </div>
             </div>
           </div>

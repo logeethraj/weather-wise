@@ -84,9 +84,9 @@ export default function WeatherChat({ weather, forecast }) {
         <button
           onClick={handleAsk}
           disabled={asking}
-          className="bg-white text-blue-600 font-semibold px-5 py-2 rounded-xl hover:bg-white/90 transition disabled:opacity-50"
+          className="bg-white text-blue-600 font-semibold px-4 py-2 rounded-xl hover:bg-white/90 transition disabled:opacity-50 whitespace-nowrap text-sm sm:text-base"
         >
-          {asking ? 'Thinking...' : 'Ask AI'}
+          {asking ? '...' : 'Ask AI'}
         </button>
       </div>
 
