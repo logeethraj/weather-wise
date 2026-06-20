@@ -9,6 +9,7 @@ import {
   reverseGeocode,
 } from '../lib/weather';
 import WeatherRecords from './components/WeatherRecords';
+import LocationExtras from './components/LocationExtras';
 
 export default function Home() {
   const [location, setLocation] = useState('');
@@ -248,6 +249,14 @@ export default function Home() {
               </div>
             </div>
           </div>
+        )}
+
+        {weather && !loading && (
+          <LocationExtras
+            locationName={weather.displayName}
+            lat={weather.coord.lat}
+            lon={weather.coord.lon}
+          />
         )}
 
         {forecast.length > 0 && !loading && (
