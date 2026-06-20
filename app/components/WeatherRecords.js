@@ -7,6 +7,8 @@ import {
   updateWeatherQuery,
   deleteWeatherQuery,
   validateDateRange,
+  exportAsJSON,
+  exportAsCSV,
 } from '../../lib/weatherQueries';
 import { searchWeatherByText } from '../../lib/weather';
 
@@ -190,6 +192,20 @@ export default function WeatherRecords() {
             Cancel Edit
           </button>
         )}
+        <button
+          onClick={() => exportAsJSON(records)}
+          disabled={records.length === 0}
+          className="bg-white/20 px-5 py-2 rounded-xl hover:bg-white/30 transition disabled:opacity-40"
+        >
+          Export JSON
+        </button>
+        <button
+          onClick={() => exportAsCSV(records)}
+          disabled={records.length === 0}
+          className="bg-white/20 px-5 py-2 rounded-xl hover:bg-white/30 transition disabled:opacity-40"
+        >
+          Export CSV
+        </button>
       </div>
 
       {/* Records list */}
