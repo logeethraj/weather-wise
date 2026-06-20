@@ -157,8 +157,8 @@ export default function Home() {
           Real-time weather, anywhere in the world
         </p>
 
-        <div className="relative">
-          <div className="flex gap-2 bg-white/20 backdrop-blur-md rounded-2xl p-2 shadow-xl">
+        <div className="relative w-full">
+          <div className="flex gap-2 bg-white/20 backdrop-blur-md rounded-2xl p-2 shadow-xl w-full">
             <input
               type="text"
               value={location}
@@ -166,7 +166,7 @@ export default function Home() {
               onKeyDown={handleKeyDown}
               onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
               placeholder="Enter city, town, or zip code..."
-              className="flex-1 bg-transparent outline-none text-white placeholder-white/70 px-4 py-2 text-lg"
+              className="flex-1 min-w-0 bg-transparent outline-none text-white placeholder-white/70 px-4 py-2 text-base sm:text-lg"
             />
             <button
               onClick={handleSearch}
