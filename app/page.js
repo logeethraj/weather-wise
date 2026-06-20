@@ -8,6 +8,7 @@ import {
   searchWeatherByText,
   reverseGeocode,
 } from '../lib/weather';
+import WeatherRecords from './components/WeatherRecords';
 
 export default function Home() {
   const [location, setLocation] = useState('');
@@ -291,6 +292,7 @@ export default function Home() {
             </div>
           </div>
         )}
+      <WeatherRecords />
       </div>
     </main>
   );
