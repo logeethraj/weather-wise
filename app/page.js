@@ -10,6 +10,7 @@ import {
 } from '../lib/weather';
 import WeatherRecords from './components/WeatherRecords';
 import LocationExtras from './components/LocationExtras';
+import WeatherChat from './components/WeatherChat';
 
 export default function Home() {
   const [location, setLocation] = useState('');
@@ -307,7 +308,11 @@ export default function Home() {
             </div>
           </div>
         )}
-      <WeatherRecords />
+      {weather && !loading && (
+          <WeatherChat weather={weather} forecast={forecast} />
+        )}
+
+        <WeatherRecords />
 
         <footer className="mt-10 bg-white/10 backdrop-blur-md rounded-3xl p-6 text-white/90 text-sm text-left">
           <h4 className="font-semibold text-base mb-2">About PM Accelerator</h4>
