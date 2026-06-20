@@ -77,9 +77,15 @@ export default function Home() {
       const forecastData = await getForecast(data.coord.lat, data.coord.lon);
       setForecast(forecastData);
     } catch (err) {
-      setError(
-        `"${location}" not found directly. Try a nearby larger town, or check spelling.`
-      );
+      if (err.message === 'NETWORK_ERROR') {
+        setError('No internet connection. Please check your network and try again.');
+      } else if (err.message === 'LOCATION_NOT_FOUND') {
+        setError(
+          `"${location}" not found. Try a nearby larger town, or check spelling.`
+        );
+      } else {
+        setError('Something went wrong fetching weather data. Please try again.');
+      }
       setWeather(null);
       setForecast([]);
     } finally {
