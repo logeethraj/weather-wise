@@ -143,9 +143,15 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-700 flex flex-col items-center px-4 py-10">
       <div className="w-full max-w-2xl text-center">
+        <p className="text-white/70 text-xs uppercase tracking-wider mb-1">
+          AI Engineer Intern Technical Assessment
+        </p>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-lg">
           🌤️ WeatherWise
         </h1>
+        <p className="text-white/80 mb-1">
+          Built by Logeeth Raj — Full Stack Submission (Tech Assessment 1 & 2)
+        </p>
         <p className="text-white/80 mb-8">
           Real-time weather, anywhere in the world
         </p>
@@ -302,6 +308,21 @@ export default function Home() {
           </div>
         )}
       <WeatherRecords />
+
+        <footer className="mt-10 bg-white/10 backdrop-blur-md rounded-3xl p-6 text-white/90 text-sm text-left">
+          <h4 className="font-semibold text-base mb-2">About PM Accelerator</h4>
+          <p className="text-white/70 leading-relaxed">
+            The Product Manager Accelerator (PM Accelerator) is a career development program
+            led by Dr. Nancy Li, helping aspiring and current product managers break into and
+            grow within the field — including AI product management. PM Accelerator is known
+            for its strong, engaged alumni network and high success rate in helping members
+            land top-tier product roles through hands-on coaching, mentorship, and real-world
+            project experience.
+          </p>
+          <p className="text-white/50 text-xs mt-3">
+            WeatherWise — built for the PM Accelerator AI Engineer Intern Technical Assessment.
+          </p>
+        </footer>
       </div>
     </main>
   );
